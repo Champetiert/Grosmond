@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="menu.js"></script>
+	<meta charset="utf-8" />
+	<title>mySite</title>
+</head>
+
+<body>
+	<header id="header">
+		<img src="source/Logo.jpg" alt="Logo" id="logo">
+		<nav id="menu">
+			<ul>
+				<li><a href="#section1" id="onglet1" class="ongletOn" onclick="activeMenu(this.id);">Accueil</a> </li>
+				<li><a href="#section2" id="onglet2" class="ongletOff" onclick="activeMenu(this.id);">Á l'affiche</a> </li>
+				<li><a href="#section3" id="onglet3" class="ongletOff" onclick="activeMenu(this.id);">Information</a> </li>
+				<li><a href="#section4" id="onglet4" class="ongletOff" onclick="activeMenu(this.id);">Mobilité</a> </li>
+				<li><a href="#section5" id="onglet5" class="ongletOff" onclick="activeMenu(this.id);">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div id="section1">
+			<h1 id="slogan">GrosMont<br>Voir la vie en grand</h1>
+			<img src="source/accueil2.jpg" id="imgAccueil" alt="image Cinema">
+		</div>
+
+		<div id="section2">
+			<H2>Les films à l'affiche</H2>
+			<div>
+				<figure class="affiche">
+					<img src="source/film1.jpg" alt="EN EAUX TROUBLES">
+					<figcaption>
+						<h2>EN EAUX TROUBLES</h2>
+						<p>Au cœur de l’océan Pacifique, le sous-marin d’une équipe de chercheurs a été attaqué par une créature
+							gigantesque qu’on croyait disparue : le Megalodon, un requin préhistorique de 23 mètres de long.</p>
+					</figcaption>
+				</figure>
+				<figure class="affiche">
+					<img src="source/film2.jpg" alt="BOHEMIAN RHAPSODY">
+					<figcaption>
+						<h2>BOHEMIAN RHAPSODY</h2>
+						Bohemian Rhapsody retrace le destin extraordinaire du groupe Queen et de leur chanteur emblématique Freddie
+						Mercury, qui a défié les stéréotypes, brisé les conventions et révolutionné la musique.
+					</figcaption>
+				</figure>
+				<figure class="affiche">
+					<img src="source/film3.jpg" alt="EN EAUX TROUBLES">
+					<figcaption>
+						<h2>AVENGERS: INFINITY WAR</h2>
+						Les Avengers et leurs alliés devront être prêts à tout sacrifier pour neutraliser le redoutable Thanos avant que
+						son attaque éclair ne conduise à la destruction complète de l’univers.
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+		<div id="section3">
+			<H2>Information pratique</H2>
+			<br>
+			<div>
+				<div>
+					<ul>
+						<li>Salle climatisée</li>
+						<li>Toutes les salles en IMAX</li>
+						<li>Son Digital Prologic Surround</li>
+					</ul>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<th class="caseVide"></th>
+							<th colspan="2">LUNDI AU VENDREDI</th>
+							<th rowspan="2">WEEK-END</th>
+						</tr>
+						<tr>
+							<th class="caseVide"></th>
+							<td>de 9h à 18h</td>
+							<td>soirée</td>
+						</tr>
+						<tr>
+							<td>-14 ans</td>
+							<td>5€</td>
+							<td>6€</td>
+							<td>6€</td>
+						</tr>
+						<tr>
+							<td>Plein tarif</td>
+							<td>10€</td>
+							<td>12€</td>
+							<td>12,50€</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="section4">
+			<iframe id="mapCiné" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2889.1123641609315!2d3.9175069406546044!3d43.6042019907503!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe581c03f9077dc6b!2sCin%C3%A9ma+Gaumont+Montpellier+Multiplexe+-+IMAX+-+4DX!5e0!3m2!1sfr!2sfr!4v1541173932020"
+			 width="600" height="450" style="border:0" allowfullscreen></iframe>
+			<div id="contact">
+				<span class="gras">Situation :</span> Centre Commercial Régional Odysseum<br>
+				<span class="gras">Adresse :</span> 235 Rue Georges Méliès, 34000 Montpellier<br>
+				<span class="gras">Téléphone :</span> 0 892 69 66 96
+			</div>
+
+
+		</div>
+		<div id="section5">
+			<h2>Contact</h2>
+			<form action="#section1" id="formContact">
+				<div class="ligne">
+					<input type="text" name="nom" placeholder="Nom" class="demiLigne" required>
+					<input type="text" name="prenom" placeholder="Prenom" class="demiLigne" required>
+				</div>
+				<div class="ligne">
+					<input type="email" name="email" placeholder="Email" class="demiLigne" required>
+					<input type="text" name="tel" placeholder="Numéro de téléphone" class="demiLigne" required>
+				</div>
+				<div class="ligne"><input type="text" name="sujet" placeholder="Sujet" id="sujet" required></div>
+				<div class="ligne"><textarea name="message" id="message" cols="30" rows="10" placeholder="message"></textarea></div>
+				<div id="buton"><input type="submit" value="Envoyer"></div>
+			</form>
+		</div>
+	</main>
+	<footer>
+		<div id="reseauxSociaux">
+			<a href="https://www.facebook.com/cinemaspathegaumont/"><img src="source/1051339-social-media/png/021-facebook.png"
+				 alt="FaceBook" class="logoRS"></a>
+			<a href="https://twitter.com/PatheGaumont"><img src="source/1051339-social-media/png/043-twitter.png" alt="Twitter"
+				 class="logoRS"></a>
+			<a href="https://www.instagram.com/cinemaspathegaumont/?hl=fr"><img src="source/1051339-social-media/png/025-instagram.png"
+				 alt="Instagram" class="logoRS"></a>
+		</div>
+		<div id="CPR">
+			&copy; Copyright 2018 ChampetierCorp.xyz
+		</div>
+	</footer>
+
+	<script>
+			window.onscroll = function() {myFunction()};
+	</script>			
+
+
+</body>
+
+</html>
