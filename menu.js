@@ -8,44 +8,44 @@ function activeMenu(onglet) {
 
 	switch (onglet) {
 		case "onglet1":
-			onglet1.className = "ongletOn";
-			onglet2.className = "ongletOff";
-			onglet3.className = "ongletOff";
-			onglet4.className = "ongletOff";
-			onglet5.className = "ongletOff";
+			onglet1.className = "active";
+			onglet2.className = "";
+			onglet3.className = "";
+			onglet4.className = "";
+			onglet5.className = "";
 			break;
 
 		case "onglet2":
-			onglet1.className = "ongletOff";
-			onglet2.className = "ongletOn";
-			onglet3.className = "ongletOff";
-			onglet4.className = "ongletOff";
-			onglet5.className = "ongletOff";
+			onglet1.className = "";
+			onglet2.className = "active";
+			onglet3.className = "";
+			onglet4.className = "";
+			onglet5.className = "";
 			break;
 
 		case "onglet3":
-			onglet1.className = "ongletOff";
-			onglet2.className = "ongletOff";
-			onglet3.className = "ongletOn";
-			onglet4.className = "ongletOff";
-			onglet5.className = "ongletOff";
+			onglet1.className = "";
+			onglet2.className = "";
+			onglet3.className = "active";
+			onglet4.className = "";
+			onglet5.className = "";
 			break;
 
 
 		case "onglet4":
-			onglet1.className = "ongletOff";
-			onglet2.className = "ongletOff";
-			onglet3.className = "ongletOff";
-			onglet4.className = "ongletOn";
-			onglet5.className = "ongletOff";
+			onglet1.className = "";
+			onglet2.className = "";
+			onglet3.className = "";
+			onglet4.className = "active";
+			onglet5.className = "";
 			break;
 
 		case "onglet5":
-			onglet1.className = "ongletOff";
-			onglet2.className = "ongletOff";
-			onglet3.className = "ongletOff";
-			onglet4.className = "ongletOff";
-			onglet5.className = "ongletOn";
+			onglet1.className = "";
+			onglet2.className = "";
+			onglet3.className = "";
+			onglet4.className = "";
+			onglet5.className = "active";
 			break;
 
 	}

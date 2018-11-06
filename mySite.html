@@ -3,145 +3,294 @@
 <html lang="fr">
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="menu.js"></script>
+	<!-- <script type="text/javascript" src="menu.js"></script> -->
 	<meta charset="utf-8" />
 	<title>mySite</title>
 </head>
 
 <body>
-	<header id="header">
-		<img src="source/Logo.jpg" alt="Logo" id="logo">
-		<nav id="menu">
-			<ul>
-				<li><a href="#section1" id="onglet1" class="ongletOn" onclick="activeMenu(this.id);">Accueil</a> </li>
-				<li><a href="#section2" id="onglet2" class="ongletOff" onclick="activeMenu(this.id);">Á l'affiche</a> </li>
-				<li><a href="#section3" id="onglet3" class="ongletOff" onclick="activeMenu(this.id);">Information</a> </li>
-				<li><a href="#section4" id="onglet4" class="ongletOff" onclick="activeMenu(this.id);">Mobilité</a> </li>
-				<li><a href="#section5" id="onglet5" class="ongletOff" onclick="activeMenu(this.id);">Contact</a></li>
-			</ul>
-		</nav>
+	<header id="header" class="fixed-top container-flow row">
+		<div class="col-1"><img src="source/Logo.jpg" alt="Logo" class="col-11 img-fluid" id="logo"></div>
+		<div class="col">
+			<nav id="menu" class="navbar navbar-expand-lg navbar-dark bg-dark float-right">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+				 aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a href="#section1" id="onglet1" class="active nav-link" onclick="activeMenu(this.id);">Accueil</a>
+						</li>
+						<li class="nav-item"><a href="#section2" id="onglet2" class="nav-link" onclick="activeMenu(this.id);">Á
+								l'affiche</a> </li>
+						<li class="nav-item"><a href="#section3" id="onglet3" class="nav-link" onclick="activeMenu(this.id);">Localisation</a>
+						</li>
+						<li class="nav-item"><a href="#section4" id="onglet4" class="nav-link" onclick="activeMenu(this.id);">Mobilité</a>
+						</li>
+						<li class="nav-item"><a href="#section5" id="onglet5" class="nav-link" onclick="activeMenu(this.id);">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
 	</header>
 	<main>
 		<div id="section1">
-			<h1 id="slogan">GrosMont<br>Voir la vie en grand</h1>
-			<img src="source/accueil2.jpg" id="imgAccueil" alt="image Cinema">
+			<h1 class="display-1 text-center" class="float-left" id="slogan">GrosMont<br>Voir la vie en grand</h1>
 		</div>
 
-		<div id="section2">
-			<H2>Les films à l'affiche</H2>
-			<div>
-				<figure class="affiche">
-					<img src="source/film1.jpg" alt="EN EAUX TROUBLES">
-					<figcaption>
-						<h2>EN EAUX TROUBLES</h2>
-						<p>Au cœur de l’océan Pacifique, le sous-marin d’une équipe de chercheurs a été attaqué par une créature
-							gigantesque qu’on croyait disparue : le Megalodon, un requin préhistorique de 23 mètres de long.</p>
-					</figcaption>
+		<div id="section2" class="container">
+			<H2 class="display-2 text-left">Les films à l'affiche</H2>
+			<div class="row">
+				<figure class="affiche col-4">
+					<img src="source/film1.jpg" class="img-fluid" alt="EN EAUX TROUBLES">
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#EAUXTROUBLES">
+						Synopsis
+					</button>
+					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#EAUXTROUBLESTicket">
+						Ajouter
+					</button>
+					<!-- Modal -->
+					<div class="modal fade" id="EAUXTROUBLES" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+					 aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">EN EAUX TROUBLES</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p>Au cœur de l’océan Pacifique, le sous-marin d’une équipe de chercheurs a été attaqué par une créature
+										gigantesque qu’on croyait disparue : le Megalodon, un requin préhistorique de 23 mètres de long.</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal fade" id="EAUXTROUBLESTicket" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+					 aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Réservation: EN EAUX TROUBLES</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form action="">
+										<div class="row">
+											<div class="col">
+												<label for="slectTarif"></label>
+												<select class="custom-select" id="slectTarif">
+													<option selected>Tarif...</option>
+													<option value="13">Normal</option>
+													<option value="10">Etudiant</option>
+													<option value="8">Enfant</option>
+												</select>
+											</div>
+											<div class="col">
+												<label for="qte">Quantité</label>
+												<input type="number" name="qte" id="qte" class="form-control" placeholder="" required>
+											</div>
+											<div class="col">
+												<label for="total">Total</label>
+												<input type="number" name="total" id="total" class="form-control" disabled="disabled">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-12">
+													<input type="button" class="btn btn-primary float-right" value="Ajouter">
+											</div>										
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</figure>
-				<figure class="affiche">
-					<img src="source/film2.jpg" alt="BOHEMIAN RHAPSODY">
-					<figcaption>
-						<h2>BOHEMIAN RHAPSODY</h2>
-						Bohemian Rhapsody retrace le destin extraordinaire du groupe Queen et de leur chanteur emblématique Freddie
-						Mercury, qui a défié les stéréotypes, brisé les conventions et révolutionné la musique.
-					</figcaption>
+				<figure class="affiche col-4">
+					<img src="source/film2.jpg" class="img-fluid" alt="BOHEMIAN RHAPSODY">
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#BOHEMIANRHAPSODY">
+						Synopsis
+					</button>
+					<!-- Modal -->
+					<div class="modal fade" id="BOHEMIANRHAPSODY" tabindex="-1" role="dialog" aria-labelledby="BOHEMIANRHAPSODY"
+					 aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">BOHEMIAN RHAPSODY</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p>Bohemian Rhapsody retrace le destin extraordinaire du groupe Queen et de leur chanteur emblématique Freddie
+										Mercury, qui a défié les stéréotypes, brisé les conventions et révolutionné la musique.</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</figure>
-				<figure class="affiche">
-					<img src="source/film3.jpg" alt="EN EAUX TROUBLES">
-					<figcaption>
-						<h2>AVENGERS: INFINITY WAR</h2>
-						Les Avengers et leurs alliés devront être prêts à tout sacrifier pour neutraliser le redoutable Thanos avant que
-						son attaque éclair ne conduise à la destruction complète de l’univers.
-					</figcaption>
+				<figure class="affiche col-4">
+					<img src="source/film3.jpg" class="img-fluid" alt="AVENGERS3">
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AVENGERS3">
+						Synopsis
+					</button>
+					<!-- Modal -->
+					<div class="modal fade" id="AVENGERS3" tabindex="-1" role="dialog" aria-labelledby="AVENGERS3" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="AVENGERS3">AVENGERS: INFINITY WAR</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p>Les Avengers et leurs alliés devront être prêts à tout sacrifier pour neutraliser le redoutable Thanos
+										avant que
+										son attaque éclair ne conduise à la destruction complète de l’univers.</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</figure>
 			</div>
 		</div>
 
 		<div id="section3">
-			<H2>Information pratique</H2>
-			<br>
-			<div>
-				<div>
-					<ul>
-						<li>Salle climatisée</li>
-						<li>Toutes les salles en IMAX</li>
-						<li>Son Digital Prologic Surround</li>
-					</ul>
-				</div>
-				<div>
-					<table>
-						<tr>
-							<th class="caseVide"></th>
-							<th colspan="2">LUNDI AU VENDREDI</th>
-							<th rowspan="2">WEEK-END</th>
-						</tr>
-						<tr>
-							<th class="caseVide"></th>
-							<td>de 9h à 18h</td>
-							<td>soirée</td>
-						</tr>
-						<tr>
-							<td>-14 ans</td>
-							<td>5€</td>
-							<td>6€</td>
-							<td>6€</td>
-						</tr>
-						<tr>
-							<td>Plein tarif</td>
-							<td>10€</td>
-							<td>12€</td>
-							<td>12,50€</td>
-						</tr>
-					</table>
+			<div class="container text-white">
+				<H2 class="display-2 text-left">Information pratique</H2>
+				<div class="row align-items-center">
+					<div class="col-6">
+						<ul>
+							<li>Salle climatisée</li>
+							<li>Toutes les salles en IMAX</li>
+							<li>Son Digital Prologic Surround</li>
+						</ul>
+					</div>
+					<div class="col">
+						<table class="table table-striped table-bordered table-dark text-center">
+							<tr>
+								<th class="caseVide"></th>
+								<th colspan="2">LUNDI AU VENDREDI</th>
+								<th rowspan="2">WEEK-END</th>
+							</tr>
+							<tr>
+								<th class="caseVide"></th>
+								<td>de 9h à 18h</td>
+								<td>soirée</td>
+							</tr>
+							<tr>
+								<td>-14 ans</td>
+								<td>5€</td>
+								<td>6€</td>
+								<td>6€</td>
+							</tr>
+							<tr>
+								<td>Plein tarif</td>
+								<td>10€</td>
+								<td>12€</td>
+								<td>12,50€</td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div id="section4">
-			<iframe id="mapCiné" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2889.1123641609315!2d3.9175069406546044!3d43.6042019907503!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe581c03f9077dc6b!2sCin%C3%A9ma+Gaumont+Montpellier+Multiplexe+-+IMAX+-+4DX!5e0!3m2!1sfr!2sfr!4v1541173932020"
-			 width="600" height="450" style="border:0" allowfullscreen></iframe>
-			<div id="contact">
-				<span class="gras">Situation :</span> Centre Commercial Régional Odysseum<br>
-				<span class="gras">Adresse :</span> 235 Rue Georges Méliès, 34000 Montpellier<br>
-				<span class="gras">Téléphone :</span> 0 892 69 66 96
+			<div class="container">
+				<h2 class="display-2 text-left">Localisation</h2>
+				<div class="row align-items-center">
+					<div class="col-6 embed-responsive embed-responsive-16by9">
+						<iframe id="mapCiné" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2889.1123641609315!2d3.9175069406546044!3d43.6042019907503!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe581c03f9077dc6b!2sCin%C3%A9ma+Gaumont+Montpellier+Multiplexe+-+IMAX+-+4DX!5e0!3m2!1sfr!2sfr!4v1541173932020"
+						 class="embed-responsive-item" allowfullscreen></iframe>
+					</div>
+					<div id="contact" class="col-6">
+						<p class="offset-2 ">
+							<span class="font-weight-bold">Situation :</span> Centre Commercial Régional Odysseum<br>
+							<span class="font-weight-bold">Adresse :</span> 235 Rue Georges Méliès, 34000 Montpellier<br>
+							<span class="font-weight-bold">Téléphone :</span> 0 892 69 66 96
+						</p>
+					</div>
+				</div>
+
 			</div>
-
-
 		</div>
 		<div id="section5">
-			<h2>Contact</h2>
-			<form action="#section1" id="formContact">
-				<div class="ligne">
-					<input type="text" name="nom" placeholder="Nom" class="demiLigne" required>
-					<input type="text" name="prenom" placeholder="Prenom" class="demiLigne" required>
-				</div>
-				<div class="ligne">
-					<input type="email" name="email" placeholder="Email" class="demiLigne" required>
-					<input type="text" name="tel" placeholder="Numéro de téléphone" class="demiLigne" required>
-				</div>
-				<div class="ligne"><input type="text" name="sujet" placeholder="Sujet" id="sujet" required></div>
-				<div class="ligne"><textarea name="message" id="message" cols="30" rows="10" placeholder="message"></textarea></div>
-				<div id="buton"><input type="submit" value="Envoyer"></div>
-			</form>
+			<div class="container">
+				<h2 class="display-2 text-left text-white">Contact</h2>
+				<form action="#section1" id="formContact">
+					<div class="form-row">
+						<div class="form-group col-6"><input class="form-control" type="text" name="nom" placeholder="Nom" required></div>
+						<div class="form-group col-6"><input class="form-control" type="text" name="prenom" placeholder="Prenom" required></div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-6"><input class="form-control" type="email" name="email" placeholder="Email" required></div>
+						<div class="form-group col-6"><input class="form-control" type="text" name="tel" placeholder="Numéro de téléphone"
+							 required></div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-12">
+							<input class="form-control" type="text" name="sujet" placeholder="Sujet" id="sujet" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-12">
+							<textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="message"></textarea>
+						</div>
+					</div>
+					<div id="button "><input type="submit" class="btn btn-primary float-right" value="Envoyer"></div>
+				</form>
+			</div>
 		</div>
 	</main>
-	<footer>
-		<div id="reseauxSociaux">
-			<a href="https://www.facebook.com/cinemaspathegaumont/"><img src="source/1051339-social-media/png/021-facebook.png"
-				 alt="FaceBook" class="logoRS"></a>
-			<a href="https://twitter.com/PatheGaumont"><img src="source/1051339-social-media/png/043-twitter.png" alt="Twitter"
-				 class="logoRS"></a>
-			<a href="https://www.instagram.com/cinemaspathegaumont/?hl=fr"><img src="source/1051339-social-media/png/025-instagram.png"
-				 alt="Instagram" class="logoRS"></a>
+	<footer class="container">
+		<div id="reseauxSociaux" class="row justify-content-around">
+			<a href="https://www.facebook.com/cinemaspathegaumont/" class="col-1"><img src="source/1051339-social-media/png/021-facebook.png"
+				 alt="FaceBook" class="img-fluid"></a>
+			<a href="https://twitter.com/PatheGaumont" class="col-1"><img src="source/1051339-social-media/png/043-twitter.png"
+				 alt="Twitter" class="img-fluid"></a>
+			<a href="https://www.instagram.com/cinemaspathegaumont/?hl=fr" class="col-1"><img src="source/1051339-social-media/png/025-instagram.png"
+				 alt="Instagram" class="img-fluid"></a>
 		</div>
-		<div id="CPR">
-			&copy; Copyright 2018 ChampetierCorp.xyz
+		<div id="CPR" class="text-center row">
+			<div class="col-12">
+				&copy; Copyright 2018 ChampetierCorp.xyz
+			</div>
 		</div>
 	</footer>
 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
 	<script>
-			window.onscroll = function() {myFunction()};
-	</script>			
+		window.onscroll = function () { myFunction() };
+	</script>
 
 
 </body>
