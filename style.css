@@ -73,3 +73,7 @@ h2{
     -webkit-border-radius: 2px;
     border-radius: 2px;
 }
+
+#section2,#section4{
+    background-color: #456FCC;
+}

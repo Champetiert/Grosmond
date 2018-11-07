@@ -6,8 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
+	<link rel="icon" type="image/jpg" href="source/Logo.jpg" />
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<!-- <script type="text/javascript" src="menu.js"></script> -->
+
 	<meta charset="utf-8" />
 	<title>mySite</title>
 </head>
@@ -42,140 +43,150 @@
 			<h1 class="display-1 text-center" class="float-left" id="slogan">GrosMont<br>Voir la vie en grand</h1>
 		</div>
 
-		<div id="section2" class="container">
-			<H2 class="display-2 text-left">Les films à l'affiche</H2>
-			<div class="row">
-				<figure class="affiche col-4">
-					<img src="source/film1.jpg" class="img-fluid" alt="EN EAUX TROUBLES">
-					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#EAUXTROUBLES">
-						Synopsis
-					</button>
-					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#EAUXTROUBLESTicket">
-						Ajouter
-					</button>
-					<!-- Modal -->
-					<div class="modal fade" id="EAUXTROUBLES" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-					 aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">EN EAUX TROUBLES</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<p>Au cœur de l’océan Pacifique, le sous-marin d’une équipe de chercheurs a été attaqué par une créature
-										gigantesque qu’on croyait disparue : le Megalodon, un requin préhistorique de 23 mètres de long.</p>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		<div id="section2">
+			<div class="container">
+				<H2 class="display-2 text-left">Les films à l'affiche</H2>
+				<div class="row">
+					<figure class="affiche col-4">
+						<img src="source/film1.jpg" class="img-fluid" alt="EN EAUX TROUBLES">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#EAUXTROUBLES">
+							Synopsis
+						</button>
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#EAUXTROUBLESTicket">
+							Ajouter
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="EAUXTROUBLES" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+						 aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">EN EAUX TROUBLES</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<p>Au cœur de l’océan Pacifique, le sous-marin d’une équipe de chercheurs a été attaqué par une créature
+											gigantesque qu’on croyait disparue : le Megalodon, un requin préhistorique de 23 mètres de long.</p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="modal fade" id="EAUXTROUBLESTicket" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-					 aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">Réservation: EN EAUX TROUBLES</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<form action="">
-										<div class="row">
-											<div class="col">
-												<label for="slectTarif"></label>
-												<select class="custom-select" id="slectTarif">
-													<option selected>Tarif...</option>
-													<option value="13">Normal</option>
-													<option value="10">Etudiant</option>
-													<option value="8">Enfant</option>
-												</select>
+						<div class="modal fade" id="EAUXTROUBLESTicket" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+						 aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Réservation: EN EAUX TROUBLES</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="" id="formCommande">
+											<div class="row commande">
+												<div class="col">
+													<label for="slectTarif"></label>
+													<select class="custom-select" id="selectTarif0" onchange="prixTiket(0);" name="tarif">
+														<option selected>Tarif...</option>
+														<option value="13">Normal</option>
+														<option value="10">Etudiant</option>
+														<option value="8">Enfant</option>
+													</select>
+												</div>
+												<div class="col">
+													<label for="qte">Quantité</label>
+													<input type="number" name="qte" id="qte0" class="form-control"onchange="prixTiket(0);" placeholder="" required>
+												</div>
+												<div class="col">
+													<label for="total">Total</label>
+													<input type="number" name="total" id="total0" class="form-control"  disabled="disabled">
+												</div>
 											</div>
-											<div class="col">
-												<label for="qte">Quantité</label>
-												<input type="number" name="qte" id="qte" class="form-control" placeholder="" required>
+											<div class="row">
+												<div class="col-12">
+													<input type="button" class="btn btn-primary float-right" id="addTicket" value="Ajouter">
+												</div>
 											</div>
-											<div class="col">
-												<label for="total">Total</label>
-												<input type="number" name="total" id="total" class="form-control" disabled="disabled">
+											<div class="row">
+												<div class="col-6 offset-3">
+														<label for="totalAll" id="labTotalAll">Total de tous les Ticket</label>
+														<input type="number" name="totalAll" id="totalAll" class="form-control" disabled="disabled">
+												</div>	
 											</div>
-										</div>
-										<div class="row">
-											<div class="col-12">
-													<input type="button" class="btn btn-primary float-right" value="Ajouter">
-											</div>										
-										</div>
-									</form>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										</form>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</figure>
-				<figure class="affiche col-4">
-					<img src="source/film2.jpg" class="img-fluid" alt="BOHEMIAN RHAPSODY">
-					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#BOHEMIANRHAPSODY">
-						Synopsis
-					</button>
-					<!-- Modal -->
-					<div class="modal fade" id="BOHEMIANRHAPSODY" tabindex="-1" role="dialog" aria-labelledby="BOHEMIANRHAPSODY"
-					 aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">BOHEMIAN RHAPSODY</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<p>Bohemian Rhapsody retrace le destin extraordinaire du groupe Queen et de leur chanteur emblématique Freddie
-										Mercury, qui a défié les stéréotypes, brisé les conventions et révolutionné la musique.</p>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</figure>
-				<figure class="affiche col-4">
-					<img src="source/film3.jpg" class="img-fluid" alt="AVENGERS3">
-					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AVENGERS3">
-						Synopsis
-					</button>
-					<!-- Modal -->
-					<div class="modal fade" id="AVENGERS3" tabindex="-1" role="dialog" aria-labelledby="AVENGERS3" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="AVENGERS3">AVENGERS: INFINITY WAR</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<p>Les Avengers et leurs alliés devront être prêts à tout sacrifier pour neutraliser le redoutable Thanos
-										avant que
-										son attaque éclair ne conduise à la destruction complète de l’univers.</p>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+					</figure>
+					<figure class="affiche col-4">
+						<img src="source/film2.jpg" class="img-fluid" alt="BOHEMIAN RHAPSODY">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#BOHEMIANRHAPSODY">
+							Synopsis
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="BOHEMIANRHAPSODY" tabindex="-1" role="dialog" aria-labelledby="BOHEMIANRHAPSODY"
+						 aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">BOHEMIAN RHAPSODY</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<p>Bohemian Rhapsody retrace le destin extraordinaire du groupe Queen et de leur chanteur emblématique
+											Freddie
+											Mercury, qui a défié les stéréotypes, brisé les conventions et révolutionné la musique.</p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</figure>
+					</figure>
+					<figure class="affiche col-4">
+						<img src="source/film3.jpg" class="img-fluid" alt="AVENGERS3">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AVENGERS3">
+							Synopsis
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="AVENGERS3" tabindex="-1" role="dialog" aria-labelledby="AVENGERS3" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="AVENGERS3">AVENGERS: INFINITY WAR</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<p>Les Avengers et leurs alliés devront être prêts à tout sacrifier pour neutraliser le redoutable Thanos
+											avant que
+											son attaque éclair ne conduise à la destruction complète de l’univers.</p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</figure>
+				</div>
 			</div>
 		</div>
 
@@ -266,18 +277,20 @@
 			</div>
 		</div>
 	</main>
-	<footer class="container">
-		<div id="reseauxSociaux" class="row justify-content-around">
-			<a href="https://www.facebook.com/cinemaspathegaumont/" class="col-1"><img src="source/1051339-social-media/png/021-facebook.png"
-				 alt="FaceBook" class="img-fluid"></a>
-			<a href="https://twitter.com/PatheGaumont" class="col-1"><img src="source/1051339-social-media/png/043-twitter.png"
-				 alt="Twitter" class="img-fluid"></a>
-			<a href="https://www.instagram.com/cinemaspathegaumont/?hl=fr" class="col-1"><img src="source/1051339-social-media/png/025-instagram.png"
-				 alt="Instagram" class="img-fluid"></a>
-		</div>
-		<div id="CPR" class="text-center row">
-			<div class="col-12">
-				&copy; Copyright 2018 ChampetierCorp.xyz
+	<footer class="bg-secondary">
+		<div class="container">
+			<div id="reseauxSociaux" class="row justify-content-around">
+				<a href="https://www.facebook.com/cinemaspathegaumont/" class="col-1"><img src="source/1051339-social-media/png/021-facebook.png"
+					 alt="FaceBook" class="img-fluid"></a>
+				<a href="https://twitter.com/PatheGaumont" class="col-1"><img src="source/1051339-social-media/png/043-twitter.png"
+					 alt="Twitter" class="img-fluid"></a>
+				<a href="https://www.instagram.com/cinemaspathegaumont/?hl=fr" class="col-1"><img src="source/1051339-social-media/png/025-instagram.png"
+					 alt="Instagram" class="img-fluid"></a>
+			</div>
+			<div id="CPR" class="text-center row">
+				<div class="col-12">
+					&copy; Copyright 2018 ChampetierCorp.xyz
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -288,10 +301,7 @@
 	 crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	 crossorigin="anonymous"></script>
-	<script>
-		window.onscroll = function () { myFunction() };
-	</script>
-
+	 <script type="text/javascript" src="script.js"></script>
 
 </body>
 
